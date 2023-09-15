@@ -15,5 +15,19 @@ public class Book {
         this.ISBN = ISBN;
         this.Year = year;
     }
+    public long getISBN() {
+        return ISBN;
+    }
 
+    public String getName() {
+        return Name;
+    }
+
+    @Override
+    public String toString() {
+        return "Book Name = '" + Name + '\'' +
+                ", Book Author = " + Author +
+                ", Book ISBN = " + ISBN +
+                ", Year of publishment = " + Year;
+    }
 }
