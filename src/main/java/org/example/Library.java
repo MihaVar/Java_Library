@@ -46,7 +46,7 @@ public class Library {
 
     public void deleteBook(long isbn) {
         int num = findIndex(isbn);
-        if(num == 0){
+        if(num == -1){
             System.out.println("Book not found!");
         }
         else {
@@ -56,7 +56,7 @@ public class Library {
     }
 
     public int findIndex(long isbn){
-        int index = 0;
+        int index = -1;
 
         for(int i = 0; i < books.size(); i++) {
             if(books.get(i).getISBN() == isbn) {
